@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TampilController;
+use App\Http\Controllers\AntrianController;
+use App\Http\Controllers\PanggilController;
+use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengunjungController;
-use App\Http\Controllers\AntrianController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PanggilController;
-use App\Http\Controllers\TampilController;
-use App\Http\Controllers\PetugasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +27,11 @@ Route::get('/', function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(['auth']);
 Route::get('/pengunjung', [PengunjungController::class, 'index'])->middleware(['auth']);
 Route::get('/antrian', [AntrianController::class, 'index']);
-Route::get('panggil', [PanggilController::class, 'index'])->middleware(['auth']);
+Route::get('/panggil', [PanggilController::class, 'index'])->middleware(['auth']);
+
 Route::get('/tampil_antrian', [TampilController::class, 'index']);
+Route::get('/tampil_antrian/json', [TampilController::class, 'json']);
+
 Route::get('/petugas', [PetugasController::class, 'index'])->middleware(['auth']);
 
 Route::post('/loginbaru', [LoginController::class, 'index']);

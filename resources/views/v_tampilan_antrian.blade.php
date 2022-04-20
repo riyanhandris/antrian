@@ -70,14 +70,14 @@
 
         <div class="container-xxl flex-grow-1 container-p-y">
             <h4 style="text-align: center" class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pemanggilan</span> Antrian</h4>
-  
+
               <!-- Text alignment -->
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4">
                   <div class="card text-center mb-3">
                     <div class="card-body">
                       <h5 class="card-title">Antrian A</h5>
-                      <h3 style="font-size: 70px" class="card-text text-nowrap mb-2">A 1</h3>
+                      <h3 style="font-size: 70px" class="card-text text-nowrap mb-2">A <span id='antrianCallA'></span></h3>
                     </div>
                   </div>
                 </div>
@@ -85,7 +85,7 @@
                   <div class="card text-center mb-3">
                     <div class="card-body">
                       <h5 class="card-title">Antrian B</h5>
-                      <h3 style="font-size: 70px" class="card-text text-nowrap mb-2">B 1</h3>
+                      <h3 style="font-size: 70px" class="card-text text-nowrap mb-2">B <span id='antrianCallB'></span></h3>
                     </div>
                   </div>
                 </div>
@@ -93,14 +93,14 @@
                   <div class="card text-center mb-3">
                     <div class="card-body">
                       <h5 class="card-title">Antrian C</h5>
-                      <h3 style="font-size: 70px" class="card-text text-nowrap mb-2">C 1</h3>
+                      <h3 style="font-size: 70px" class="card-text text-nowrap mb-2">C <span id='antrianCallC'></span></h3>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <!--/ Text alignment -->
-  
+
           </div>
         <!-- / Content -->
       </div>
@@ -133,5 +133,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="{{ asset('js/antrian.js') }}"></script>
   </body>
 </html>
