@@ -40,6 +40,8 @@ Route::post('/panggil/ada/{id}', [PanggilController::class, 'panggilAda']);
 Route::post('/panggil/tidak/{id}', [PanggilController::class, 'panggilTidak']);
 Route::post('/panggil_antri/{id}', [PanggilController::class, 'panggilAntri']);
 
+Route::post('/logout', [LogoutController::class, 'index'])->name('logout');
+
 
 require __DIR__ . '/auth.php';
 

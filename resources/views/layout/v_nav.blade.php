@@ -31,11 +31,14 @@
       </li>
 
       <li class="menu-item">
-        <a href="#" class="menu-link">
-          <button type="button" class="btn rounded-pill btn-danger ">
+        <form action="/logout" method="post">
+        @csrf
+        <a href="" class="menu-link">
+          <button type="submit" class="btn rounded-pill btn-danger ">
             <span class="bx bx-power-off me-2"></span>&nbsp; Keluar
           </button>
         </a>
+        </form>
         
       </li>
       
