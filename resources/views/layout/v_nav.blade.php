@@ -30,7 +30,7 @@
         </a>
       </li>
 
-      <li class="menu-item">
+      {{-- <li class="menu-item">
         <form action="/logout" method="post">
         @csrf
         <a href="" class="menu-link">
@@ -39,8 +39,7 @@
           </button>
         </a>
         </form>
-        
-      </li>
+      </li> --}}
       
    
   </ul>

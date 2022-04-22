@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AntrianModel;
 use Illuminate\Http\Request;
 use App\Models\PengunjungModel;
 
 class PengunjungController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->PengunjungModel = new PengunjungModel();
-    }
-
     public function index()
     {
-        return view('v_pengunjung');
+        $data = AntrianModel::all();
+
+        return view('v_pengunjung', compact('data'));
     }
 }

@@ -19,11 +19,18 @@
           </tr>
         </thead>
         <tbody class="table-border-bottom-0">
+          @foreach ($data as $data )
+            
           <tr>
-            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>#</strong></td>
-            <td>Antrian A1</td>
-            <td>09:00/today</td>
-            <td><span class="badge bg-label-primary me-1">Ada</span></td>
+            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{$loop->iteration}}</strong></td>
+            <td>Antrian {{$data->jenis_antrian}} {{$data->antrian}}</td>
+            <td>{{ $data->updated_at }}</td>
+            <td>
+              @if ($data->status == 'Ada')
+              <span class="badge bg-label-primary me-1">{{$data->status}}
+              @else
+              <span class="badge bg-label-danger me-1">{{$data->status}}</span></td>
+              @endif
             <td>
               <div class="dropdown">
                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -40,6 +47,7 @@
               </div>
             </td>
           </tr>
+          @endforeach
         </tbody>
       </table>
     </div>

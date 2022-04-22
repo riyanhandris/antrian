@@ -45,6 +45,11 @@ Route::post('/panggil_antri/{id}', [PanggilController::class, 'panggilAntri']);
 
 Route::post('/logout', [LogoutController::class, 'index'])->name('logout');
 
+Route::post('/petugas/insert', [PetugasController::class, 'insert']);
+Route::get('/petugas/edit/{id}', [PetugasController::class, 'edit']);
+Route::post('/petugas/update/{id}', [PetugasController::class, 'update']);
+
+Route::get('/petugas/delete/{id}', [PetugasController::class, 'delete']);
 
 require __DIR__ . '/auth.php';
 
