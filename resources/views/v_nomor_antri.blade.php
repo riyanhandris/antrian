@@ -76,15 +76,15 @@
 
     <div class="row mt-3">
       <div class="d-grid gap-2 col-lg-6 mx-auto">
-        <form action="/print/antrianA" method="POST">
+        <form action="/print/antrianA" method="POST" target="blank">
           @csrf
           <button style="width:100%" class="btn rounded-pill btn-primary btn-lg" type="submit">Antrian A</button>
         </form>
-        <form action="/print/antrianB" method="POST">
+        <form action="/print/antrianB" method="POST" target="blank">
           @csrf
           <button style="width:100%" class="btn rounded-pill btn-secondary btn-lg" type="submit">Antrian B</button>  
         </form>
-        <form action="/print/antrianC" method="POST">
+        <form action="/print/antrianC" method="POST" target="blank">
           @csrf
           <button style="width:100%" class="btn rounded-pill btn-warning btn-lg" type="submit">Antrian C</button>
         </form>

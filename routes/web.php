@@ -55,4 +55,4 @@ require __DIR__ . '/auth.php';
 
 // // Sementara
 // Route::view('/index', 'v_login');
-Route::view('/print', 'v_print ');
+// Route::view('/print', 'v_print ');
